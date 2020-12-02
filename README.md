@@ -1,4 +1,4 @@
-# mobileiot
+# Grupo Media
 
 Trabalho acadêmico - versão inicial.
 
