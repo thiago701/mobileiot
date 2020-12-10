@@ -8,7 +8,7 @@ Disciplina: Dispositivos Móveis e Internet das Coisas
 
 Grupo: Márcia, Raniere, Rafaela e Thiago
 
-Curso: MBA Machine Learning e IoT
+Curso: MBA Machine Learning e IoT (UNIPÊ)
 
 ### Arquitetura: (Visão em alto nível)
 
