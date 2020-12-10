@@ -12,4 +12,4 @@ Curso: MBA Machine Learning e IoT
 
 ### Arquitetura: (Visão em alto nível)
 
-![](arquitetura.png)
+![](arquitetura/arquitetura.png)
