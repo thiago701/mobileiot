@@ -4,6 +4,6 @@ Trabalho acadêmico - versão inicial.
 
 Grupo: Márcia, Raniere, Rafaela e Thiago
 
-### Arquitetura 
+### Arquitetura: (Visão em alto nível)
 
 ![](arquitetura.png)
