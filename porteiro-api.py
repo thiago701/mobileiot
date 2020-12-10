@@ -33,7 +33,7 @@ def obterNotificacoes():
     
     base = pd.read_csv('dados.csv')
     mensagens = base.query('status == 0')
-    dicio = mensagens.to_dict()
+    dicio = mensagens.to_dict('list')
     
     # atualizar status
     atualizarStatus(base)
@@ -42,9 +42,9 @@ def obterNotificacoes():
         return '', http.HTTPStatus.NO_CONTENT
     elif(dicio):
         print('retornando mensagens...',dicio)
-        return jsonify(dicio['mensagem'][1])
+        return jsonify(dicio['mensagem'])
 
-# fghsfjhghlkjsf
+# salva mensagem em csv
 def salvarMensagem(msg):
     if(not os.path.exists(os.path.join(os.getcwd(),'dados.csv'))):
         df = pd.DataFrame(columns=['mensagem','status'])
@@ -53,8 +53,8 @@ def salvarMensagem(msg):
     novaMensagem = pd.DataFrame([[msg,0]], columns=['mensagem','status'])
     baseAtualizada = base.append(novaMensagem, ignore_index=True)
     baseAtualizada.to_csv('dados.csv', index=False)
-    
-        
+
+# atualiza status (não lido = 0 | lido = 1) 
 def atualizarStatus(dataFrame):
     dataFrame['status'] = 1
     dataFrame.to_csv('dados.csv', index=False)
